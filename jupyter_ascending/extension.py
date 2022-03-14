@@ -25,7 +25,7 @@ def set_everything_up():
     notebook_name = get_name_from_python()
     logger.info("IPYTHON: Loading {notebook}", notebook=notebook_name)
 
-    if f".{SYNC_EXTENSION}.ipynb" not in notebook_name:
+    if f".ipynb" not in notebook_name:
         logger.info("IPYTHON: Not loading {notebook} because name does not match", notebook=notebook_name)
         return
 

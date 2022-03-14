@@ -11,7 +11,7 @@ from jupyter_ascending.requests.client_lib import request_notebook_command
 
 @logger.catch
 def send(file_name: str):
-    if f".{SYNC_EXTENSION}.py" not in file_name:
+    if f".py" not in file_name:
         return
 
     logger.info(f"Syncing File: {file_name}...")

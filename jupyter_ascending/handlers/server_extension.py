@@ -94,7 +94,7 @@ def _make_url(notebook_port: int):
 def get_server_for_notebook(notebook_str: str) -> Optional[str]:
     """Get the URL to the server running on the Jupyter notebook that best matches this filename."""
     # Normalize to notebook path
-    notebook_str = notebook_str.replace(f".{SYNC_EXTENSION}.py", f".{SYNC_EXTENSION}.ipynb")
+    notebook_str = notebook_str.replace(f".py", f".ipynb")
     logger.debug("Finding server for notebook_str, script_path: {}", notebook_str)
 
     notebook_path = Path(notebook_str)
